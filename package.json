@@ -1,0 +1,18 @@
+{
+  "name": "codeial",
+  "version": "1.0.0",
+  "description": "My first major Dynamic Website",
+  "main": "index.js",
+  "scripts": {
+    "start":"npx nodemon",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "social"
+  ],
+  "author": "Kevin",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
