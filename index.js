@@ -7,8 +7,9 @@ const port =8000;
 
 
 //use express routes
+// all the request are mapped to routes folder
 app.use('/',require('./routes'));
-// app.use('/user',require('./routes/user'));
+
 
 
 app.listen(port,function(err){
