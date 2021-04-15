@@ -10,6 +10,10 @@ const port =8000;
 // all the request are mapped to routes folder
 app.use('/',require('./routes'));
 
+//set up view engine
+app.set('view engine','ejs');
+app.set('views','./views')
+
 
 
 app.listen(port,function(err){
