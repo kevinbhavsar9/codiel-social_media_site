@@ -1,6 +1,4 @@
-// const express=require('express');
-// const app=express();
-// app.use(express.urlencoded());
+const User=require('../models/user');
 
 module.exports.profile=function(req,res){
     // res.end("<h1>User's profile</h1>")
@@ -25,8 +23,7 @@ module.exports.login=function(req,res){
             
     })
 }
-
-module.exports.signup=function(req,res){
+ module.exports.signup=function(req,res){
     return res.render('signup',{
         title:"Login"
             
@@ -35,13 +32,29 @@ module.exports.signup=function(req,res){
 
 module.exports.loginData=function(req,res){
     
-    // console.log(req.body);
+    console.log(req.body);
     //to do
 }
 
 module.exports.signupData=function(req,res){
-    // console.log(req.body);
-    //to do
-            
+   if(req.body.password!=req.body.passwordAgain){
+       return res.redirect('/user/signup')
+   }   
+   
+       User.findOne({email:req.body.email},function(err,user){
+           if(err){console.log('error finding email while signingup'); return};
+
+           if(!user){
+               User.create(req.body);
+               return res.redirect('/user/login');
+           }
+           else{
+            return res.redirect('/user/signup')
+   
+           }
+       })
+   
+   
+   
     
 }

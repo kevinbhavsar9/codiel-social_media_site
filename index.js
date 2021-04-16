@@ -1,12 +1,21 @@
 
 const express=require('express');
+const db =require('./config/database_config');
+const expressLayouts =require('express-ejs-layouts');
+const cookieParser=require('cookie-parser');
+
+const port =8000;
 
 const app=express();
 
-const port =8000;
-const db =require('./config/database_config');
-const expressLayouts =require('express-ejs-layouts');
 app.use(expressLayouts);
+
+app.use(express.urlencoded());
+
+//cookie parser
+app.use(cookieParser());
+
+
 
 
 // extract style and scripts from sub pages into the layout
