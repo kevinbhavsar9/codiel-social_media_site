@@ -2,7 +2,7 @@
 const express=require('express');
 const db =require('./config/database_config');
 const expressLayouts =require('express-ejs-layouts');
-const cookieParser=require('cookie-parser');
+var cookieParser=require('cookie-parser');
 
 const port =8000;
 
@@ -29,7 +29,7 @@ app.use('/',require('./routes'));
 //set assets
 app.use(express.static('assets'));
 
-app.use(express.urlencoded());
+// app.use(express.urlencoded());
 
 //set up view engine
 app.set('view engine','ejs');

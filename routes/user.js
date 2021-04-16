@@ -13,6 +13,7 @@ router.get('/message',userController.message);
 router.get('/feed',userController.feed);
 router.get('/login',userController.login);
 router.get('/signup',userController.signup);
+router.get('/signout',userController.signout);
 router.post('/signupdata',userController.signupData);
 router.post('/logindata',userController.loginData);
 
