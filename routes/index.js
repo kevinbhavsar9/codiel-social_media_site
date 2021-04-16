@@ -11,6 +11,7 @@ console.log('router loaded');
 
 router.get('/',homepageController.home);
 router.get('/about',homepageController.about);
+
 router.use('/user',require('./user'));
 
 // for any further routes,access fom here

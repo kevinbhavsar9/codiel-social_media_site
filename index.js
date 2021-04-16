@@ -10,6 +10,9 @@ const port =8000;
 // all the request are mapped to routes folder
 app.use('/',require('./routes'));
 
+//set assets
+app.use(express.static('assets'));
+
 //set up view engine
 app.set('view engine','ejs');
 app.set('views','./views')

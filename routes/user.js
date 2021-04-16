@@ -11,5 +11,7 @@ router.get('/profile',userController.profile);
 router.get('/',userController.user);
 router.get('/message',userController.message);
 router.get('/feed',userController.feed);
+router.get('/login',userController.login);
+router.get('/signup',userController.signup);
 
 module.exports=router;
