@@ -1,16 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%=title%></title>
-    <link rel="stylesheet" href="/login/login.css">
+    <link rel="stylesheet" href="/css/login/login.css">
 </head>
-<body>
     <div class="container">
         <h1 style="color:aliceblue;">Login page</h1>
-        <form action="/logindata" method="post" id="form">
+        <form action="/user/logindata" method="post" id="form">
             <div class="mail">
                 <label class='label' for=""><strong>Email:</strong></label>
                 <input type="email" name="email" id="myEmail" required placeholder="Enter Email">
@@ -23,5 +16,3 @@
             <button type="submit" class="btn">Login</button>
         </form>
     </div>
-</body>
-</html>

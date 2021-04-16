@@ -1,27 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%=title%></title>
-    <link rel="stylesheet" href="/signup/signup.css" />
-</head>
+    <link rel="stylesheet" href="/css/signup/signup.css">
 
-<body>
+</head>
     <div class="container">
         <div class="header">
             <h1 style="color: aliceblue;">Welcome to the Site</h1>
         </div>
         <div class="form">
-            <form action="/signupdata" method="post" id="form">
+            <form action="/user/signupdata" method="post" id="form">
                 <div class="form-item">
                     <div class="label">
                         <label for="">Enter Email:</label>
                     </div>
                     <div class="input">
-                        <input type="email" name="email" id="" placeholder="Enter Email" />
+                        <input type="email" name="email" required id="" placeholder="Enter Email" />
                     </div>
 
                 </div>
@@ -31,7 +23,7 @@
                         <label for="">Create Password:</label>
                     </div>
                     <div class="input">
-                        <input type="password" name="password" id="" placeholder="Enter Password" />
+                        <input type="password" name="password" required id="" placeholder="Enter Password" />
                     </div>
                 </div>
                 <div class="form-item">
@@ -41,7 +33,7 @@
                     </div>
                     <div class="input">
 
-                        <input type="text" name="name" id="" placeholder="Enter Name" />
+                        <input type="text" name="name" id="" required placeholder="Enter Name" />
                     </div>
                 </div>
                 <div class="button">
@@ -51,6 +43,3 @@
             </form>
         </div>
     </div>
-</body>
-
-</html>

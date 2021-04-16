@@ -1,3 +1,7 @@
+// const express=require('express');
+// const app=express();
+// app.use(express.urlencoded());
+
 module.exports.profile=function(req,res){
     // res.end("<h1>User's profile</h1>")
     return res.render('profile',{
@@ -21,9 +25,23 @@ module.exports.login=function(req,res){
             
     })
 }
+
 module.exports.signup=function(req,res){
     return res.render('signup',{
         title:"Login"
             
     })
+}
+
+module.exports.loginData=function(req,res){
+    
+    // console.log(req.body);
+    //to do
+}
+
+module.exports.signupData=function(req,res){
+    // console.log(req.body);
+    //to do
+            
+    
 }

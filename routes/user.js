@@ -13,5 +13,7 @@ router.get('/message',userController.message);
 router.get('/feed',userController.feed);
 router.get('/login',userController.login);
 router.get('/signup',userController.signup);
+router.post('/signupdata',userController.signupData);
+router.post('/logindata',userController.loginData);
 
 module.exports=router;
