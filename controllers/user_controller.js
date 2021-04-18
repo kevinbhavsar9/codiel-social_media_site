@@ -46,6 +46,7 @@ module.exports.signupData=function(req,res){
 
            if(!user){
                User.create(req.body);
+               console.log(User.find().doc);
                return res.redirect('/user/login');
            }
            else{
