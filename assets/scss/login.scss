@@ -1,0 +1,41 @@
+body {
+    
+
+    .container {
+        text-align: center;
+        background-color: cadetblue;
+        padding: 21px 50px;
+
+        h1 {
+            color: aliceblue;
+        }
+        #form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .mail {
+                margin: 20px;
+
+                .label {
+                    /* padding: 20px 20px; */
+                    margin: 20px 20px;
+
+                    strong {
+                        color: aliceblue;
+                    }
+                }
+            }
+
+            .password {
+                margin: 20px;
+            }
+            .btn {
+                width: 100px;
+                /* display: inline-block; */
+                padding: 10px;
+                border-radius: 20px;
+            }
+        }
+    }
+}

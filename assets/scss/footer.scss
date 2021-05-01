@@ -1,0 +1,26 @@
+footer{
+    background-color: rgb(163, 156, 156);
+    height: 30%;
+    color: white;
+    .centainer{
+        display: flex;
+        justify-content: space-between;
+        .items{
+            h3{
+                margin: 20px;
+            }
+            ul{
+                list-style: none;
+                li{
+                    a{
+                        color: white;
+                        text-decoration: none;
+                    }
+                }
+            }
+
+            // margin: 0px 20px;
+        }
+        
+    }
+}

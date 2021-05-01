@@ -1,0 +1,33 @@
+body {
+    background-color: rgb(169, 172, 171);
+
+    .container {
+        background-color: cadetblue;
+        .header {
+            text-align: center;
+            h1{
+
+                margin-top: 0px;
+            }
+        }
+        .form {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            .form-item {
+                display: flex;
+                justify-content: space-between;
+                align-content: center;
+                margin: 20px 0px;
+                .label {
+                    margin-right: 20px;
+                }
+            }
+            .button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+}

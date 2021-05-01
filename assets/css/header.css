@@ -1,0 +1,25 @@
+header {
+  background-color: royalblue;
+  color: white;
+  font-size: 1.5rem;
+  padding-bottom: 20px; }
+  header #navbar {
+    list-style: none;
+    display: flex;
+    position: relative;
+    height: 46px;
+    margin-bottom: 0px; }
+    header #navbar div {
+      margin: 2px; }
+    header #navbar #right {
+      position: absolute;
+      height: 100%;
+      right: 0px; }
+      header #navbar #right div {
+        display: flex; }
+        header #navbar #right div div {
+          padding: 0px 10px; }
+          header #navbar #right div div a {
+            padding-top: 8px;
+            text-decoration: none;
+            color: white; }

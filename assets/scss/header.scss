@@ -1,0 +1,42 @@
+header{
+    background-color: royalblue;
+    color: white;
+    font-size:1.5rem ;
+    padding-bottom: 20px;
+    #navbar{
+        list-style: none;
+        display: flex;
+        position: relative;
+        height: 46px;
+        // border: 2px solid red;
+        margin-bottom: 0px;
+        
+        div{
+            // border: 2px solid red;
+        //    color: yellow;
+            // padding: auto;
+            margin: 2px;
+        }
+        #right{
+            position: absolute;
+            height: 100%;
+            right: 0px;
+            div{
+                display: flex;
+                
+                div{
+                    padding: 0px 10px;
+                    a{
+                        padding-top: 8px;
+                        text-decoration: none;
+                        color: white;
+
+                    }
+
+                }
+            }
+           
+        }
+
+    }
+}

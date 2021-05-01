@@ -3,29 +3,38 @@ const User=require('../models/user');
 module.exports.profile=function(req,res){
     // res.end("<h1>User's profile</h1>")
     return res.render('profile',{
-        name:"kevin",
+        
         title:"profile"
     })
 }
 module.exports.message=function(req,res){
-    res.end("<h1>User's message</h1>")
+    // res.end("<h1>User's message</h1>")
 }
 module.exports.feed=function(req,res){
-    res.end("<h1>User's Feed</h1>")
+    // res.end("<h1>User's Feed</h1>")
 }
 module.exports.user=function(req,res){
-    res.end("<h1>Hi i am user :)</h1>")
+    // res.end("<h1>Hi i am user :)</h1>")
+    return res.render('home',{
+        title:"Home"
+    })
 }
 
 module.exports.login=function(req,res){
+    if(req.isAuthenticated()){
+       return res.redirect('/user/profile')
+    }
     return res.render('login',{
         title:"Login"
             
     })
 }
  module.exports.signup=function(req,res){
+    if(req.isAuthenticated()){
+       return res.redirect('/user/profile')
+    }
     return res.render('signup',{
-        title:"Login"
+        title:"Signup"
             
     })
 }
@@ -33,7 +42,7 @@ module.exports.login=function(req,res){
 module.exports.loginData=function(req,res){
     
     console.log(req.body);
-    //to do
+    return res.redirect('/')
 }
 
 module.exports.signupData=function(req,res){
@@ -58,4 +67,10 @@ module.exports.signupData=function(req,res){
    
    
     
+}
+
+module.exports.destroySession=function(req,res){
+
+    req.logout();
+    return res.redirect('/')
 }

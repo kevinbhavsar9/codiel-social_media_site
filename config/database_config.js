@@ -1,5 +1,11 @@
 const mongoose=require('mongoose');
-mongoose.connect('mongodb://localhost/userData',{ useNewUrlParser: true },);
+mongoose.connect('mongodb://localhost/userData', {
+  dbName: process.env.DB_NAME,
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useFindAndModify: false,
+  useCreateIndex: true,
+});
 const db=mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {

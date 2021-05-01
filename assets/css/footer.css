@@ -1,0 +1,14 @@
+footer {
+  background-color: #a39c9c;
+  height: 30%;
+  color: white; }
+  footer .centainer {
+    display: flex;
+    justify-content: space-between; }
+    footer .centainer .items h3 {
+      margin: 20px; }
+    footer .centainer .items ul {
+      list-style: none; }
+      footer .centainer .items ul li a {
+        color: white;
+        text-decoration: none; }

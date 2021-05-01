@@ -1,0 +1,25 @@
+body .container {
+  text-align: center;
+  background-color: cadetblue;
+  padding: 21px 50px; }
+  body .container h1 {
+    color: aliceblue; }
+  body .container #form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    body .container #form .mail {
+      margin: 20px; }
+      body .container #form .mail .label {
+        /* padding: 20px 20px; */
+        margin: 20px 20px; }
+        body .container #form .mail .label strong {
+          color: aliceblue; }
+    body .container #form .password {
+      margin: 20px; }
+    body .container #form .btn {
+      width: 100px;
+      /* display: inline-block; */
+      padding: 10px;
+      border-radius: 20px; }

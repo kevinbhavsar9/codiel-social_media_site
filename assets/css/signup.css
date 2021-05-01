@@ -1,0 +1,23 @@
+body {
+  background-color: #a9acab; }
+  body .container {
+    background-color: cadetblue; }
+    body .container .header {
+      text-align: center; }
+      body .container .header h1 {
+        margin-top: 0px; }
+    body .container .form {
+      display: flex;
+      justify-content: center;
+      align-content: center; }
+      body .container .form .form-item {
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        margin: 20px 0px; }
+        body .container .form .form-item .label {
+          margin-right: 20px; }
+      body .container .form .button {
+        display: flex;
+        justify-content: center;
+        align-items: center; }
