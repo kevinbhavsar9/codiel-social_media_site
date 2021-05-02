@@ -1,3 +1,4 @@
+
 const express=require('express');
 const userController=require('../controllers/user_controller');
 const passport=require('passport');
@@ -16,6 +17,8 @@ router.get('/login',userController.login);
 router.get('/signup',userController.signup);
 router.post('/signupdata',userController.signupData);
 // use passport as middleware to authenticate
-router.post('/logindata',passport.authenticate('local',{failureRedirect:'/users/login'}),userController.loginData);
+router.post('/logindata',passport.authenticate('local',{failureRedirect:'/user/login'}),userController.loginData);
 router.get('/signout',userController.destroySession);
+
+
 module.exports=router;

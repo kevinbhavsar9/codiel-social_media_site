@@ -1,5 +1,6 @@
 const User=require('../models/user');
 
+
 module.exports.profile=function(req,res){
     // res.end("<h1>User's profile</h1>")
     return res.render('profile',{
@@ -41,7 +42,7 @@ module.exports.login=function(req,res){
 
 module.exports.loginData=function(req,res){
     
-    console.log(req.body);
+    //console.log(req.body);
     return res.redirect('/')
 }
 
@@ -74,3 +75,4 @@ module.exports.destroySession=function(req,res){
     req.logout();
     return res.redirect('/')
 }
+

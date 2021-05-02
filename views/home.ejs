@@ -1,11 +1,57 @@
-<h1>this page is home page through view engine ejs</h1>
+<head>
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+<h1>CODIEL | HOME</h1>
+<%if(locals.user){%>
+
+    <section id="feed-posts">
+        <div id="upload">
+            <h3>Upload</h3>
+            <form action="/post/create" id="new-post-form" method="POST">
+                <textarea name="content" id="" cols="30" rows="3" placeholder="Type Your Post here....."></textarea>
+                <input type="submit" value="Post">
+
+            </form>
+        </div>
+        <div id="posts">
+            <h1>Posts</h1>
 
 
-<section id="feed-posts">
-    <h3>Posts</h3>
-    <form action="" id="new-post-form" method="POST">
-        <textarea name="content" id="" cols="30" rows="3"></textarea>
-        <input type="submit" value="Post">
 
-    </form>
-</section>
+            <!-- <%for(const i of list){%>
+                   
+                <%}%> -->
+
+            <%for(const i of list){%>
+                <div id="box">
+                    <div id="cont">
+                        <%=i.content%>
+                    </div>
+                    <hr>
+                    <div id="user">
+                        <%=i.user.name%>
+                    </div>
+
+                </div>
+            <%}%>
+
+
+
+                    <!-- <div id="box">
+            <div id="cont">olaa laa laaa
+            </div>
+            <hr>
+            <div id="user">ganduuu vaibhav
+              
+            </div>
+        </div> -->
+        </div>
+
+
+
+
+
+
+
+    </section>
+    <%}%>

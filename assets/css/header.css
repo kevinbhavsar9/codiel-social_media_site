@@ -11,6 +11,9 @@ header {
     margin-bottom: 0px; }
     header #navbar div {
       margin: 2px; }
+      header #navbar div a {
+        text-decoration: none;
+        color: blanchedalmond; }
     header #navbar #right {
       position: absolute;
       height: 100%;
