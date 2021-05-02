@@ -20,13 +20,22 @@ module.exports.home=function(req,res){
     // populate() function in mongoose is used for populating the data inside the reference. In your example PostSchema is having user field which will reference to the _id field which is basically the ObjectId of the mongodb document in user model
 
 
-    Post.find({}).populate('user').exec(function(err,post){
+    Post
+    .find({})
+    .populate('user')
+    .populate({
+        path:'comments',
+        populate:{
+            path:'user'
+        }
+    })
+    .exec(function(err,post){
             if(err){console.log('error in fetcing posts'); return;}
-            const list=post;
+           
             return res.render('home',
             {  
                 title:"Home",
-                list:list,
+                post:post,
                 
             })   
   });

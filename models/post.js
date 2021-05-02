@@ -1,4 +1,5 @@
 const mongoose=require('mongoose');
+const Comment=require('../models/comment');
 
 const postSchema=new mongoose.Schema({
     content:{
@@ -10,7 +11,14 @@ const postSchema=new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref:'User'
 
+    },
+    // include  the array of ids of comments of particular posts to fetch fastly
+    comments:[
+    {
+        type: mongoose.Schema.Types.ObjectId,
+        ref:'Comment'
     }
+]
 
 },{
     timestamps:true

@@ -14,6 +14,7 @@ router.get('/about',homepageController.about);
 
 router.use('/user',require('./user'));
 router.use('/post',require('./post'));
+router.use('/comment',require('./comment'));
 
 // for any further routes,access fom here
 // router.use('/routerName',require('./routerfile'));

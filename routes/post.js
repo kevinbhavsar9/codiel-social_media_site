@@ -5,6 +5,6 @@ const { authenticate } = require('passport');
 const router=express.Router();
 console.log('post router its working');
 
-router.post('/create',post_controller.create)
+router.post('/create',passport.checkAuthentication,post_controller.create)
 
 module.exports=router;
