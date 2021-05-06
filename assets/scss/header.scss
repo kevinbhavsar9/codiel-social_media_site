@@ -4,6 +4,7 @@ header{
     font-size:1.5rem ;
     padding-bottom: 20px;
     #navbar{
+       
         list-style: none;
         display: flex;
         position: relative;
@@ -20,6 +21,9 @@ header{
                 text-decoration: none;
                 color: blanchedalmond;
             }
+            a:hover{
+                color: burlywood;
+            }
         }
         #right{
             position: absolute;
@@ -35,6 +39,9 @@ header{
                         text-decoration: none;
                         color: white;
 
+                    }
+                    a:hover{
+                        color: burlywood;
                     }
 
                 }

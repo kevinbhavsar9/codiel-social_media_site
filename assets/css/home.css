@@ -1,3 +1,17 @@
-#posts #post-box {
-  border: 2px solid gray;
-  margin: 5px 10px; }
+#feed-posts #upload #new-post-form #exampleFormControlTextarea1 {
+  width: 50%;
+  margin: auto; }
+
+#feed-posts #upload #new-post-form #post-btn-submit {
+  margin: 10px 0px; }
+
+#feed-posts #posts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  #feed-posts #posts .post-box {
+    border: 2px solid gray;
+    box-shadow: 2px 2px black;
+    margin: 5px 10px;
+    width: 25%; }

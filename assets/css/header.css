@@ -14,6 +14,8 @@ header {
       header #navbar div a {
         text-decoration: none;
         color: blanchedalmond; }
+      header #navbar div a:hover {
+        color: burlywood; }
     header #navbar #right {
       position: absolute;
       height: 100%;
@@ -26,3 +28,5 @@ header {
             padding-top: 8px;
             text-decoration: none;
             color: white; }
+          header #navbar #right div div a:hover {
+            color: burlywood; }

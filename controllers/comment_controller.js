@@ -10,8 +10,8 @@ module.exports.create=function(req,res){
                 user: req.user._id
             },function(err,comment){
                 //handle err
-
-                post.comments.push(comment);
+                //console.log(comment);
+                post.comments.push(comment._id);
                 post.save();
 
                 res.redirect('/')
