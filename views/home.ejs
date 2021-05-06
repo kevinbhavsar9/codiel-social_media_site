@@ -38,6 +38,9 @@
                     <div class="user">
                         <%=i.user.name%>
                     </div>
+                    <%if(locals.user && i.user.id==locals.user.id){%>
+                    <button><a href="/post/delete/<%=i.id%>">Delete</a></button>
+                    <%}%>
                     <hr>
                     <%if(locals.user){%>
                     <div class="comment-container">
@@ -48,6 +51,10 @@
                            <p><%=comment.content%></p>
                                
                                 <p><%=comment.user.name%></p>
+
+                                <%if(locals.user.id==comment.user.id && locals.user){%>
+                                <button><a href="/comment/delete/<%=comment.id%>">Delete</a></button>
+                                <%}%>
                                 <hr>
                            <%}%>
                           

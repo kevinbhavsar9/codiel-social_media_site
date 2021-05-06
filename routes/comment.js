@@ -4,6 +4,7 @@ const comment_controller=require('../controllers/comment_controller');
 
 
 router.post('/create',comment_controller.create);
+router.get('/delete/:id',comment_controller.delete);
 
 
 

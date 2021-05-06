@@ -17,3 +17,20 @@ module.exports.create=function(req,res){
    
 
 }
+
+module.exports.delete=function(req,res){
+    Post.findById(req.params.id,function(err,post){
+        if(post){
+            if(post.user==req.user.id)
+             post.remove();
+
+             Comment.deleteMany({post:req.params.id},function(err){
+                 return res.redirect('back');
+             });
+
+        }
+        else{
+            return res.redirect('back');
+        }
+    })
+}
