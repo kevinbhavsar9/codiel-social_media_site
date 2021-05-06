@@ -3,10 +3,13 @@ const User=require('../models/user');
 
 module.exports.profile=function(req,res){
     // res.end("<h1>User's profile</h1>")
-    return res.render('profile',{
-        
-        title:"profile"
+    User.findById(req.params.id,function(err,usar){
+        return res.render('profile',{
+            profile_user:usar,
+            title:"profile"
+        })
     })
+   
 }
 module.exports.message=function(req,res){
     // res.end("<h1>User's message</h1>")
@@ -74,5 +77,17 @@ module.exports.destroySession=function(req,res){
 
     req.logout();
     return res.redirect('/')
+}
+
+module.exports.update=function(req,res){
+    // req.body={name:req.body.name,email:req.body.email}
+    if(req.user.id==req.params.id){
+        User.findByIdAndUpdate(req.params.id,req.body,function(err,user){
+            return res.redirect('back');
+        })
+    }
+    else{
+        return res.status(401).send('Unauthorized');
+    }
 }
 

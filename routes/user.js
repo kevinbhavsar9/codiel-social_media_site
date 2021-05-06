@@ -9,7 +9,7 @@ const router=express.Router();
 
 console.log('its working');
 
-router.get('/profile',passport.checkAuthentication,userController.profile);
+router.get('/profile/:id',passport.checkAuthentication,userController.profile);
 router.get('/',userController.user);
 router.get('/message',userController.message);
 router.get('/feed',userController.feed);
@@ -19,6 +19,6 @@ router.post('/signupdata',userController.signupData);
 // use passport as middleware to authenticate
 router.post('/logindata',passport.authenticate('local',{failureRedirect:'/user/login'}),userController.loginData);
 router.get('/signout',userController.destroySession);
-
+router.post('/update/:id',userController.update);
 
 module.exports=router;

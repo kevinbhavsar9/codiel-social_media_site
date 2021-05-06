@@ -10,7 +10,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center; }
-  #feed-posts #posts .post-box {
+  #feed-posts #posts .main-box {
     border: 2px solid gray;
     box-shadow: 2px 2px black;
     margin: 5px 10px;

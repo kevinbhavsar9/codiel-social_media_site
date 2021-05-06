@@ -1,9 +1,9 @@
 const { populate } = require('../models/post');
 const Post = require('../models/post');
-const User=require('../models/user');
+const User = require('../models/user');
 
 
-module.exports.home=function(req,res){
+module.exports.home = function (req, res) {
     // console.log(req.cookies);
     // res.cookie('user_id',69)
     // Post.find({},function(err,post){
@@ -13,7 +13,7 @@ module.exports.home=function(req,res){
     //     {  
     //         title:"Home",
     //         list:list,
-            
+
     //     })      
     // });
 
@@ -21,29 +21,33 @@ module.exports.home=function(req,res){
 
 
     Post
-    .find({})
-    .populate('user')
-    .populate({
-        path:'comments',
-        populate:{
-            path:'user'
-        }
-    })
-    .exec(function(err,post){
-            if(err){console.log('error in fetcing posts'); return;}
-           
-            return res.render('home',
-            {  
-                title:"Home",
-                post:post,
-                
-            })   
-  });
+        .find({})
+        .populate('user')
+        .populate({
+            path: 'comments',
+            populate: {
+                path: 'user'
+            }
+        })
+        .exec(function (err, post) {
+            if (err) { console.log('error in fetcing posts'); return; }
+
+            User.find({}, function (err, usar) {
+                return res.render('home',
+                    {
+                        title: "Home",
+                        post: post,
+                        all_user:usar
+
+                    })
+            })
+
+        });
 }
 
-   
 
-module.exports.about=function(req,res){
+
+module.exports.about = function (req, res) {
     res.end('<h1>we are fun loving people :)</h1>')
 }
 

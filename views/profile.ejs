@@ -1,3 +1,19 @@
 
-    <h1>hello i m <%=user.name%> n this is my profile</h1>
-    <h1><%=user.email%></h1>
+<h1>
+    Codiel | Profile
+</h1>
+
+    <%if(user.id==profile_user.id){%>
+
+        <form action="/user/update/<%=profile_user.id%>" method="post">
+            <input type="text" name="name" id="" placeholder="Name" value="<%=profile_user.name%>" required>
+            <input type="email" name="email" id="" placeholder="Email" value="<%=profile_user.email%>" required>
+            <input type="submit" value="Update">
+        </form>
+       
+
+    <%}else{%>
+        <h1>hello i m <%=profile_user.name%> n this is my profile</h1>
+        <h1><%=profile_user.email%></h1>
+
+    <%}%>
